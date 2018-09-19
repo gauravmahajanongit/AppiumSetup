@@ -4,6 +4,8 @@ package tests;
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.TouchAction;
 import io.appium.java_client.android.AndroidDriver;
+import io.appium.java_client.touch.offset.PointOption;
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.net.URL;
@@ -66,16 +68,19 @@ public class AppiumTest {
 			
 			System.out.println("waiting for download button");
 			
-			Thread.sleep(25000);
+			Thread.sleep(20000);
 
 			System.out.println("now finding the download button");
 			
-			 
-			
-
-			 MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download_start");
+			(new TouchAction(driver))
+			  .press(PointOption.point( 755, 1498))
+			  .moveTo(PointOption.point(774, 832))
+			  .release()
+			  .perform();
+		
+			 MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download");
 			 el5.click();
-			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_high");
+			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low");
 			 el6.click();
            
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
