@@ -87,19 +87,17 @@ public class AppiumTest {
 			{
 			        Thread.sleep(1000);}  
         	
-        	MobileElement el8 = (MobileElement) driver.findElementByAccessibilityId("SUCCESSFUL");
+        	MobileElement el8 = (MobileElement) driver.findElementByAccessibilityId("SUCCESSFUL"); // clicking on the check to initiate the video
         	el8.click();
         	
         	MobileElement el9 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_yes");
         	el9.click();
-   
+  
         	
-        	
-        	
-        	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view");
+        	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view"); // click to intiate the forward by 10 sec button
         	el11.click();
         	
-        //	(new TouchAction(driver)).tap(883, 302).perform();
+        	(new TouchAction(driver)).tap(PointOption.point( 883, 302)).perform(); // this is to forward the video by 10 sec
         	
         	driver.quit();
 			
