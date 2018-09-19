@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER">
+		<attributes>
+			<attribute name="module" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/selenium-html-runner-3.13.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/selenium-server-standalone-3.14.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/byte-buddy-1.8.15.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/commons-exec-1.3.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/guava-25.0-jre.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/httpclient-4.5.5.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/httpcore-4.4.9.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/okhttp-3.10.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/libs/okio-1.14.1.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/selenium-java-3.14.0 (1)/client-combined-3.14.0-sources.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/selenium-java-3.14.0 (1)/client-combined-3.14.0.jar"/>
+	<classpathentry kind="lib" path="/Users/gmahajan/Downloads/java-client-6.1.0.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
