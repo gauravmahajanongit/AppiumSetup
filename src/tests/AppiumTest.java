@@ -66,11 +66,10 @@ public class AppiumTest {
 			MobileElement el4 = (MobileElement) driver.findElementByXPath("(//android.widget.RelativeLayout[@content-desc=\"Social\"])[1]/android.widget.FrameLayout/android.widget.ImageView");
 			el4.click(); // selecting the result for social series
 			
-			System.out.println("waiting for download button");
+		
 			
-			Thread.sleep(20000);
+			Thread.sleep(1000);
 
-			System.out.println("now finding the download button");
 			
 			(new TouchAction(driver))
 			  .press(PointOption.point( 755, 1498))
@@ -78,11 +77,14 @@ public class AppiumTest {
 			  .release()
 			  .perform();
 		
-			 MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download");
+			 MobileElement el5 = (MobileElement) driver.findElementByXPath("(//android.widget.LinearLayout[@content-desc=\"Social - Trailer (Telugu)\"])[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView");
 			 el5.click();
 			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low");
 			 el6.click();
            
+			 MobileElement el7 = (MobileElement) driver.findElementByXPath("(//android.widget.LinearLayout[@content-desc=\"Social - Trailer (Telugu)\"])[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView");
+			 el7.click();
+			 
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
 			{
 			        Thread.sleep(1000);}  
