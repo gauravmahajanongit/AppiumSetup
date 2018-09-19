@@ -64,14 +64,18 @@ public class AppiumTest {
 			MobileElement el4 = (MobileElement) driver.findElementByXPath("(//android.widget.RelativeLayout[@content-desc=\"Social\"])[1]/android.widget.FrameLayout/android.widget.ImageView");
 			el4.click(); // selecting the result for social series
 			
-			// following code is introduced as replacement for scroll down to go to desired episode in the list.
+			System.out.println("waiting for download button");
 			
-			MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download_start");
+			Thread.sleep(25000);
+
+			
+			
+			MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download_start"); //clicking on download button
 			el5.click();
-			MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low");
+			
+			MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low"); // selecting quality of download
 			el6.click();
            
-            
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
 			{
 			        Thread.sleep(1000);}  
@@ -82,15 +86,17 @@ public class AppiumTest {
         	MobileElement el9 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_yes");
         	el9.click();
         	
+
+  
         	
-        	MobileElement el10 = (MobileElement) driver.findElementByXPath("/hierarchy/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.LinearLayout[1]/android.widget.RelativeLayout[2]");
-        	el10.click();
+        	
         	
         	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view");
         	el11.click();
         	
+        //	(new TouchAction(driver)).tap(883, 302).perform();
+        	
         	driver.quit();
-        
 			
 	}
  
