@@ -70,6 +70,7 @@ public class AppiumTest {
 			
 			Thread.sleep(1000);
 
+			System.out.println("waiting to scroll");
 			
 			(new TouchAction(driver))
 			  .press(PointOption.point( 755, 1498))
@@ -82,9 +83,6 @@ public class AppiumTest {
 			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low");
 			 el6.click();
            
-			 MobileElement el7 = (MobileElement) driver.findElementByXPath("(//android.widget.LinearLayout[@content-desc=\"Social - Trailer (Telugu)\"])[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView");
-			 el7.click();
-			 
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
 			{
 			        Thread.sleep(1000);}  
