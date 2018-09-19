@@ -68,13 +68,15 @@ public class AppiumTest {
 			
 			Thread.sleep(25000);
 
+			System.out.println("now finding the download button");
 			
+			 
 			
-			MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download_start"); //clicking on download button
-			el5.click();
-			
-			MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low"); // selecting quality of download
-			el6.click();
+
+			 MobileElement el5 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_download_start");
+			 el5.click();
+			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_high");
+			 el6.click();
            
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
 			{
@@ -85,9 +87,7 @@ public class AppiumTest {
         	
         	MobileElement el9 = (MobileElement) driver.findElementById("com.vuclip.viu:id/iv_yes");
         	el9.click();
-        	
-
-  
+   
         	
         	
         	
