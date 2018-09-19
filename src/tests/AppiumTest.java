@@ -94,10 +94,10 @@ public class AppiumTest {
         	el9.click();
   
         	
-        	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view"); // click to intiate the forward by 10 sec button
+        	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view"); // click to initiate the forward by 10 sec button
         	el11.click();
         	
-        	(new TouchAction(driver)).tap(PointOption.point( 883, 302)).perform(); // this is to forward the video by 10 sec
+        	(new TouchAction(driver)).tap(PointOption.point( 883, 302)).perform(); // this is to forward the video by 10 sec, by cordinates
         	
         	driver.quit();
 			
