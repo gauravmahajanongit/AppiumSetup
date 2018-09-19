@@ -68,19 +68,15 @@ public class AppiumTest {
 			
 		
 			
-			Thread.sleep(1000);
+			Thread.sleep(500);
 
-			System.out.println("waiting to scroll");
+
 			
-			(new TouchAction(driver))
-			  .press(PointOption.point( 755, 1498))
-			  .moveTo(PointOption.point(774, 832))
-			  .release()
-			  .perform();
+			(new TouchAction(driver)).press(PointOption.point( 755, 1498)).moveTo(PointOption.point(774, 832)).release().perform(); // to scroll to the botton of the screen
 		
-			 MobileElement el5 = (MobileElement) driver.findElementByXPath("(//android.widget.LinearLayout[@content-desc=\"Social - Trailer (Telugu)\"])[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView");
+			 MobileElement el5 = (MobileElement) driver.findElementByXPath("(//android.widget.LinearLayout[@content-desc=\"Social - Trailer (Telugu)\"])[2]/android.widget.LinearLayout/android.widget.RelativeLayout/android.widget.ImageView"); // to select the trailor for downloading using xpath
 			 el5.click();
-			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low");
+			 MobileElement el6 = (MobileElement) driver.findElementById("com.vuclip.viu:id/tv_low"); // selecting the video quality here for downloading
 			 el6.click();
            
         	while(!driver.findElementById("SUCCESSFUL").isDisplayed())   // waiting for the download to complete by checking for completion icon
@@ -97,7 +93,7 @@ public class AppiumTest {
         	MobileElement el11 = (MobileElement) driver.findElementById("com.vuclip.viu:id/surface_view"); // click to initiate the forward by 10 sec button
         	el11.click();
         	
-        	(new TouchAction(driver)).tap(PointOption.point( 883, 302)).perform(); // this is to forward the video by 10 sec, by cordinates
+        	(new TouchAction(driver)).tap(PointOption.point( 883, 302)).perform(); // this is to forward the video by 10 sec, by coordinates
         	
         	driver.quit();
 			
